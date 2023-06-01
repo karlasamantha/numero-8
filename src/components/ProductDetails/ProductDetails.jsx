@@ -1,10 +1,8 @@
 import React from "react";
 
-function ProductDetails () {
+function ProductDetails() {
   return (
-    <div>
-      <h1>Product Details</h1>
-    </div>
+    <div>Product Details</div>
   )
 }
 

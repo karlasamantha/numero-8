@@ -1,28 +1,30 @@
 import data from './utils/productList.json'
 
+import Card from './components/Card/Card'
+
 function App() {
   return (
-    <div>
-      <h1 className="text-3xl font-bold underline">Products</h1>
-
+    <div className="container flex min-h-screen flex-col justify-center overflow-hidden my-4">
       {data.map((product) => (
-        <div key={product.ProductID}>
-          <div>
-            <div>
-              <img src={product.ThumbnailURL} alt="" />
+        <Card key={product.ProductID}>
+          <img src={product.ThumbnailURL} alt="" className="aspect-square" />
+
+          <div className="flex flex-row justify-between flex-1 ml-4">
+            <div className="self-center relative">
+              <p className="font-medium text-xl">{product.Name}</p>
+              <span className="text-base">${product.Price}</span>
+              <span className="text-xs line-through absolute ml-1">
+                ${product['Retail Price']}
+              </span>
             </div>
 
-            <div>
-              <p className="product-name">{product.Name}</p>
-              <span className="product-price">${product.Price}</span>
-              <span className="product-retail">${product['Retail Price']}</span>
-            </div>
-
-            <div xs={3}>
-              <button className="view-details">View Details</button>
+            <div className="self-center">
+              <button className="bg-green-400 hover:bg-green-600 text-white p-4 rounded-md">
+                View Details
+              </button>
             </div>
           </div>
-        </div>
+        </Card>
       ))}
     </div>
   )
