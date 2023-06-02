@@ -12,7 +12,7 @@ module.exports = {
     },
     extend: {
       gridTemplateColumns: {
-        row: '250px minmax(900px, 3fr) 2fr'
+        row: '250px minmax(850px, 3fr) 2fr'
       }
     }
   },
