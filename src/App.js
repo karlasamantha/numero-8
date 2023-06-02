@@ -1,5 +1,5 @@
+import { Link } from 'react-router-dom'
 import data from './utils/productList.json'
-
 import Card from './components/Card/Card'
 
 function App() {
@@ -19,9 +19,12 @@ function App() {
             </div>
 
             <div className="self-center">
-              <button className="bg-green-400 hover:bg-green-600 text-white p-4 rounded-md">
+              <Link
+                to={`details/${product.ProductID}`}
+                className="bg-green-400 hover:bg-green-600 text-white py-3 px-6 rounded-md"
+              >
                 View Details
-              </button>
+              </Link>
             </div>
           </div>
         </Card>

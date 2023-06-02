@@ -9,6 +9,11 @@ module.exports = {
   theme: {
     container: {
       center: true
+    },
+    extend: {
+      gridTemplateColumns: {
+        row: '250px minmax(900px, 3fr) 2fr'
+      }
     }
   },
   plugins: []
